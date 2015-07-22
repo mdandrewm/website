@@ -1,0 +1,78 @@
+/* app css stylesheet */
+
+body {
+	background-image: url('../img/gears.png');
+	background-position-x: 0px;
+	background-position-y: 0px;
+}
+
+#header-bar {
+	height: 50px;
+	line-height: 50px;
+	background-image: url('../img/gears blue.png');
+}
+
+#home-icon {
+	display: inline;
+	max-height:50px;
+	max-width:50px;
+	margin-top: -11px;	
+}
+
+.header-button {
+	color: white;
+	font-size: 25px;
+	display: inline;
+	padding: 0 10px 0 10px;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+.header-button:active{
+	color:red;
+}
+
+#omnigryphon-banner {
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+#omnigryphon-banner-image {
+	width: 800px;
+}
+
+.content {
+	background-color: white;
+	margin: 10px 20px 0 20px;
+	padding: 0 10px 10px 10px;
+	border: solid 3px black;
+}
+
+.news-header {
+	font-size: 36px;
+}
+
+.news-sub {
+	font-size: 13px;
+	margin-top: -11px;
+	border-bottom: black solid 1px;
+	padding-bottom: 2px;
+	margin-bottom: 5px;
+}
+
+.news-content {
+	
+}
+
+/* General selectors */
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

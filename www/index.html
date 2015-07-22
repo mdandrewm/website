@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="McCurryApp">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Andrew's Blog</title>
+	<link rel="stylesheet" href="Resources/css/app.css">
+    <link rel="stylesheet" href="Resources/bootstrap/css/bootstrap.min.css" >
+
+	<script src="Resources/angular/angular.js"></script>
+	<script src="Resources/angular/angular-route.js"></script>
+	<script src="Resources/js/app.js"></script>
+	<script src="Resources/js/controllers.js"></script>
+</head>
+<body>
+	<div id="content-pinch">
+		<div id="page-title-banner">
+			<img id="banner-page-icon" src="Resources/images/BannerImage.png">
+		</div>
+		<div ng-controller="HeaderBarController" id="header-bar" class="unselectable">
+			<div class="header-button" ng-click="goTo('/Home')" >Home</div>
+			<div class="header-button" ng-click="goTo('/Blog')" >Blog</div>
+		</div>
+		<div ng-view></div>
+		
+		<div id="main-content">
+			
+		</div>
+	<div>
+</body>
+</html>

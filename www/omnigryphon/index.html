@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="omnigryphonApp">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Omnigryphon Games</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="angular/require.js"></script>
+	<script src="angular/angular.js"></script>
+	<script src="angular/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/services.js"></script>
+</head>
+<body style="background-image:url('img/gears.png')">
+	<div ng-controller="HeaderBarController" id="header-bar" class="unselectable">
+		<img id="home-icon" src="img/Logo 4.1.png">
+		<div class="header-button" ng-click="goTo('/Home')" >Home</div>
+		<div class="header-button" ng-click="goTo('/Videos')" >Videos</div>
+		<div class="header-button" ng-click="goTo('/Blog')" >Blog</div>
+		<div class="header-button" ng-click="goTo('/About')" >About</div>
+	</div>
+	<div ng-view></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+	<div id="omnigryphon-banner" ng-click="test()">
+		<img id="omnigryphon-banner-image" src="img/Website Banner.png">
+	</div>
+	<div class="content">
+		<h1 style="text-align:center"> News </h1>	
+		<div ng-repeat="story in NewsStories">
+			<div class="news-header"> {{story.Title}} </div>
+			<div class="news-sub"> {{story.Date}} </div>
+			<p class="news-content"> {{story.Content}}</p>
+		</div>
+	</div>
