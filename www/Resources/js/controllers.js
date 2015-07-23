@@ -11,9 +11,9 @@ McCurryControllers.controller('HeaderBarController',
 	}
 );
 
-McCurryControllers.controller('NewsCtrl', ['$scope','$routeParams','DatabaseService',
-	function($scope,$routeParams,DatabaseService) {
-		$scope.NewsStories = 
+McCurryControllers.controller('HomeCtrl', ['$scope','$routeParams',
+	function($scope,$routeParams) {
+		$scope.RecentPosts = 
 		[
 			{
 				Title: "The Site is Live!",
@@ -23,7 +23,10 @@ McCurryControllers.controller('NewsCtrl', ['$scope','$routeParams','DatabaseServ
 		];
 		$scope.test = function()
 		{
-			DatabaseService.testConnect();
+			//DatabaseService.testConnect();
+		}
+		$scope.viewLoaded=function(){
+			$('.carousel ').carousel()
 		}
 	}
 ]);

@@ -4,27 +4,26 @@
 
 var McCurryApp = angular.module('McCurryApp', [
   'ngRoute',
-  'McCurryControllers',
-  'McCurryServices'
+  'McCurryControllers'
 ]);
 
 McCurryApp.config(['$routeProvider','$locationProvider',
   function($routeProvider,$locationProvider) {
     $routeProvider
 		.when('/Home', {
-			templateUrl: 'partials/news-partial.html',
-			controller: 'NewsCtrl'
+			templateUrl: 'Resources/partials/home-partial.html',
+			controller: 'HomeCtrl'
 		})
 		.when('/Videos', {
-			templateUrl: 'partials/videos-partial.html',
+			templateUrl: 'Resources/partials/videos-partial.html',
 			controller: 'VideosCtrl'
 		})
 		.when('/Blog', {
-			templateUrl: 'partials/blog-partial.html',
+			templateUrl: 'Resources/partials/blog-partial.html',
 			controller: 'BlogCtrl'
 		})
 		.when('/About', {
-			templateUrl: 'partials/about-partial.html',
+			templateUrl: 'Resources/partials/about-partial.html',
 			controller: 'AboutCtrl'
 		})
 		.otherwise({
