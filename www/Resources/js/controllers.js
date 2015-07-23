@@ -34,20 +34,21 @@ McCurryControllers.controller('HomeCarouselCtrl', ['$scope',
 		var slides = $scope.slides = [];
 		slides.push(
 			{
-				image: 'Resources/images/A.png',
-				imageid: 'carousel-logo',
-				text: 'Andrew McCurry',
-				subtext: '3D Printing and Gaming Blog'
+				mainImageSrc: "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+				captionImageSrc: "Resources/images/A.png",
+				captionImageId: "carousel-logo",
+				text:"Andrew McCurry",
+				subtext:"3D Printing and Gaming Blog",
 			},
 			{
-				image: 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-				text: 'This will be something 3D',
-				subtext: 'and this will say something cool'
+				mainImageSrc: "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+				text:"Some image of 3D printing",
+				subtext:"Isn't it awesome?",
 			},
 			{
-				image: 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-				text: 'Screenshot of an idle game!?',
-				subtext: 'And what it is'
+				mainImageSrc: "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+				text:"Idle Gaming!",
+				subtext:"I can speak of this",
 			}
 		);
 	}
