@@ -4,7 +4,9 @@
 
 var McCurryApp = angular.module('McCurryApp', [
   'ngRoute',
-  'McCurryControllers'
+  'McCurryControllers',
+  'ngAnimate',
+  'ui.bootstrap'
 ]);
 
 McCurryApp.config(['$routeProvider','$locationProvider',

@@ -25,9 +25,31 @@ McCurryControllers.controller('HomeCtrl', ['$scope','$routeParams',
 		{
 			//DatabaseService.testConnect();
 		}
-		$scope.viewLoaded=function(){
-			$('.carousel ').carousel()
-		}
+	}
+]);
+
+McCurryControllers.controller('HomeCarouselCtrl', ['$scope',
+	function($scope) {
+		$scope.myInterval = 5000;
+		var slides = $scope.slides = [];
+		slides.push(
+			{
+				image: 'Resources/images/A.png',
+				imageid: 'carousel-logo',
+				text: 'Andrew McCurry',
+				subtext: '3D Printing and Gaming Blog'
+			},
+			{
+				image: 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+				text: 'This will be something 3D',
+				subtext: 'and this will say something cool'
+			},
+			{
+				image: 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+				text: 'Screenshot of an idle game!?',
+				subtext: 'And what it is'
+			}
+		);
 	}
 ]);
 
