@@ -13,22 +13,24 @@ McCurryApp.config(['$routeProvider','$locationProvider',
   function($routeProvider,$locationProvider) {
     $routeProvider
 		.when('/Home', {
-			templateUrl: 'Resources/partials/home-partial.html',
+			templateUrl: 'resources/partials/home-partial.html',
 			controller: 'HomeCtrl'
 		})
 		.when('/Videos', {
-			templateUrl: 'Resources/partials/videos-partial.html',
+			templateUrl: 'resources/partials/videos-partial.html',
 			controller: 'VideosCtrl'
 		})
-		.when('/Blog', {
-			templateUrl: 'Resources/partials/blog-partial.html',
+		.when('/Blog/:year?/:month?/:day?/:title?', {
+			templateUrl: 'resources/partials/blog-partial.html',
 			controller: 'BlogCtrl'
 		})
 		.when('/About', {
-			templateUrl: 'Resources/partials/about-partial.html',
+			templateUrl: 'resources/partials/about-partial.html',
 			controller: 'AboutCtrl'
 		})
 		.otherwise({
 			redirectTo: '/Home'
 		});
+	
+    //$locationProvider.html5Mode(true);
   }]);

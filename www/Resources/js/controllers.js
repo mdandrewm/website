@@ -11,8 +11,9 @@ McCurryControllers.controller('HeaderBarController',
 	}
 );
 
-McCurryControllers.controller('HomeCtrl', ['$scope','$routeParams',
-	function($scope,$routeParams) {
+McCurryControllers.controller('HomeCtrl', ['$scope','$routeParams', '$http',
+	function($scope,$routeParams,$http) {
+		$scope.text = "text";
 		$scope.RecentPosts = 
 		[
 			{
@@ -21,10 +22,12 @@ McCurryControllers.controller('HomeCtrl', ['$scope','$routeParams',
 				Content: " The site is live!  There's not much more to be said other than the fact that it's being hosted at the right web address.  Nothing else is currently functional, nor is all of the structure as I want it to be, but it is my own creation, so it is something I will slowly be improving!  Thanks for stopping by!"
 			}
 		];
-		$scope.test = function()
-		{
-			//DatabaseService.testConnect();
-		}
+		$http.post('/resources/php/main_page.php').success(
+			function($data)
+			{
+				$scope.text = $data;
+			}
+		);
 	}
 ]);
 
@@ -35,7 +38,7 @@ McCurryControllers.controller('HomeCarouselCtrl', ['$scope',
 		slides.push(
 			{
 				mainImageSrc: "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
-				captionImageSrc: "Resources/images/A.png",
+				captionImageSrc: "resources/images/A.png",
 				captionImageId: "carousel-logo",
 				text:"Andrew McCurry",
 				subtext:"3D Printing and Gaming Blog",
@@ -61,6 +64,11 @@ McCurryControllers.controller('VideosCtrl', ['$scope','$routeParams',
 
 McCurryControllers.controller('BlogCtrl', ['$scope','$routeParams',
 	function($scope,$routeParams) {
+		$scope.test = "test";
+		$scope.year = $routeParams.year;
+		$scope.month = $routeParams.month;
+		$scope.day = $routeParams.day;
+		$scope.title = $routeParams.title;
 	}
 ]);
 
